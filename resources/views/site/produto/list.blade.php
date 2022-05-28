@@ -7,7 +7,7 @@
                 <tr>
                     <th>ID</th>
                     <th>Nome</th>
-                    <th>Genero</th>
+                    <th>Categoria</th>
                     <th>Validade</th>
                     <th>Preço</th>
                     <th>Ações</th>
@@ -26,7 +26,7 @@
                     </tr>
                 @endforeach
             </table>
-            <a class="btn btn-success" href="{{route('produto.create')}}" role="button">Adicionar Disco</a>
+            <a class="btn btn-success" href="{{route('produto.create')}}" role="button">Adicionar Produto</a>
         </div>
     </div>
     {{$produtos->links()}}

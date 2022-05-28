@@ -40,18 +40,18 @@ class CategoriaController extends Controller
     {
         Categoria::create($request->except('_token'));
 
-        return redirect('gender');
+        return redirect('categoria');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\gender  $gender
+     * @param  \App\Models\categoria  $categoria
      * @return \Illuminate\Http\Response
      */
-    public function show(int $gender)
+    public function show(int $categoria)
     {
-        $produto = Produto::where('categoria_id','=',$gender)->get();
+        $produto = Produto::where('categoria_id','=',$categoria)->get();
 
         return view('site.produto.index',['produto' => $produto]);
     }
@@ -59,21 +59,21 @@ class CategoriaController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\gender  $gender
+     * @param  \App\Models\categoria  $categoria
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
-        $gender = Categoria::find($id);
+        $categoria = Categoria::find($id);
 
-        return view('site.categoria.edit', ['gender' => $gender]);
+        return view('site.categoria.edit', ['categoria' => $categoria]);
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\gender  $gender
+     * @param  \App\Models\categoria $categoria
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, int $id)
@@ -82,18 +82,18 @@ class CategoriaController extends Controller
             'name' => $request->name
         ]);
 
-        return redirect('gender');
+        return redirect('categoria');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\gender  $gender
+     * @param  \App\Models\categoria  $categoria
      * @return \Illuminate\Http\Response
      */
     public function destroy($categoria_id)
     {
         Categoria::where('id', $categoria_id)->delete();
-        return redirect('gender');
+        return redirect('categoria');
     }
 }

@@ -9,19 +9,19 @@
                     <th>Nome</th>
                     <th>Ações</th>
                 </tr>
-                @foreach ($categoria as $gender)
+                @foreach ($categorias as $categoria)
                     <tr>
-                        <td>{{$gender->id}}</a></td>
-                        <td>{{$gender->name}}</td>
+                        <td>{{$categoria->id}}</a></td>
+                        <td>{{$categoria->name}}</td>
                         <td>
-                            <a class="btn btn-warning" href="{{route('categoria.edit', $gender->id)}}" role="button">Alterar</a>
-                            <a class="btn btn-danger" href="{{route('categoria.delete', $gender->id)}}" role="button">Deletar</a>
+                            <a class="btn btn-warning" href="{{route('categoria.edit', $categoria->id)}}" role="button">Alterar</a>
+                            <a class="btn btn-danger" href="{{route('categoria.delete', $categoria->id)}}" role="button">Deletar</a>
                         </td>
                     </tr>
                 @endforeach
             </table>
-            <a class="btn btn-success" href="{{route('categoria.create')}}" role="button">Adicionar Gênero</a>
+            <a class="btn btn-success" href="{{route('categoria.create')}}" role="button">Adicionar Categoria</a>
         </div>
     </div>
-    {{$categoria->links()}}
+    {{$categorias->links()}}
 @endsection

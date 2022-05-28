@@ -6,8 +6,8 @@
             <table class="table table-striped">
                 <tr>
                     <th>ID</th>
-                    <th>Nome</th>
-                    <th>Genero</th>
+                    <th>Categoria</th>
+                    <th>Produto</th>
                     <th>Preço</th>
                     <th>Ações</th>
                 </tr>

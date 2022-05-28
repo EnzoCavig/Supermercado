@@ -6,7 +6,7 @@
         <form method="post" action="{{route('produto.update', $produto->id)}}">
             @csrf
             <div class="form-group">
-                <label for="categoria_id">Genero</label>
+                <label for="categoria_id">Categoria</label>
                 <select name="categoria_id" id="categoria_id" class="form-control">
                     @foreach($categoria as $gender)
                         <option value="{{$gender->id}}">{{$gender->name}}</option>
